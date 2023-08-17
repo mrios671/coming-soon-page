@@ -1,13 +1,19 @@
 @import "reset.css";
-:root{
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root {
     --colors-primary: #CE9898;
-    --colors-primary-gradient:linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    --colors-primary-gradient: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
     --colors-secondary: #CE9898;
     --colors-darker-secondary: #EE8B8B;
-    --colors-dark: #423A3A ;
+    --colors-dark: #423A3A;
     --colors-light: #FFF;
     --colors-light-gradient: linear-gradient(28deg, #FFF1F1 0%, #FFFFFF 100%);
 }
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .page-wrapper{
     display: flex;
     min-height: 100vh;
@@ -17,7 +23,7 @@
     flex: 2 0 0;
     background: var(--colors-light-gradient);
     display: flex;
-    align-items: start;
+    align-items: stretch;
     justify-content: center;
     padding: 75px;
 }
@@ -27,7 +33,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 133px;
 }
 
 .logo-wrapper{
@@ -39,11 +44,55 @@
 .text-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    flex: 1 0 0;
 }
 
 .text-container h1 {
     text-transform: uppercase;
+    font-size: 64px;
+    letter-spacing: 17px;
+    font-weight: 600;
+    line-height: 71px;
+}
 
+.text-container h1 span{
+    color: var(--colors-secondary);
+    font-weight: 300;
+}
+
+.text-container p {
+    color: var(--colors-secondary);
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+input{
+    min-height: 56px;
+    border-radius: 999px;
+    width: 100%;
+    border: 1px solid var(--colors-secondary);
+    padding-left: 32px;
+}
+
+input::placeholder {
+    color: var(--colors-secondary);
+}
+
+input:focus {
+    outline: var(--colors-darker-secondary);
 }
 
 .right-side{
@@ -55,3 +104,15 @@
     background-position: center;
 }
 
+.single-submit {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--colors-primary-gradient);
+    border: none;
+    cursor: pointer;
+    border-radius: 999px;
+    margin-left: -100px;
+    box-shadow: 0px 15px 20px 0px rgba(198, 110, 110, 0.25);
+}

@@ -8,3 +8,6 @@ img {
     display: block;
     max-width: 100%;
 }
+input, input::placeholder {
+    font-family: inherit;
+}
