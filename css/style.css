@@ -1,2 +1,57 @@
 @import "reset.css";
+:root{
+    --colors-primary: #CE9898;
+    --colors-primary-gradient:linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+    --colors-secondary: #CE9898;
+    --colors-darker-secondary: #EE8B8B;
+    --colors-dark: #423A3A ;
+    --colors-light: #FFF;
+    --colors-light-gradient: linear-gradient(28deg, #FFF1F1 0%, #FFFFFF 100%);
+}
+.page-wrapper{
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-side{
+    flex: 2 0 0;
+    background: var(--colors-light-gradient);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 75px;
+}
+
+.left-side-inner{
+    max-width: 445px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 133px;
+}
+
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container h1 {
+    text-transform: uppercase;
+
+}
+
+.right-side{
+    flex: 1 0 0;
+    /*height: 100vh;*/
+    aspect-ratio: 610/800;
+    background-image: url("../img/main-model.png");
+    background-size: cover;
+    background-position: center;
+}
 
